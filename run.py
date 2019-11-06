@@ -16,7 +16,7 @@ app.css.append_css({"external_url": external_css})
 app.config.supress_callback_exceptions = True
 server = app.server
 
-colors = {"background": "#959c96",'plot_bg':'#959c96', "text": "#2a2e2b",'heading':'#d62728'}
+colors = {"background": "#aa84d1",'plot_bg':'#959c96', "text": "#2a2e2b",'heading':'#d62728'}
 text_font = {"fontSize": 20}
 
 PATH = pathlib.Path(__file__).parent
