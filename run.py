@@ -11,7 +11,7 @@ from dash.dependencies import Output, Input
 external_css = "https://codepen.io/chriddyp/pen/bWLwgP.css"
 
 
-app = dash.Dash(__name__)
+app = dash.Dash(__name__,csrf_protect=False)
 app.css.append_css({"external_url": external_css})
 app.config.supress_callback_exceptions = True
 server = app.server
