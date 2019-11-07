@@ -50,7 +50,7 @@ app.layout = html.Div(
         html.Div(
             [
                 html.H1(className="nine columns",children="Marketing KPI Dashboard",style={"textAlign": "center","color": colors["text"],"fontSize":30}),
-                html.Img(className='two columns',src=app.get_asset_url('logo.png'),style={"height": '15%',"width":'15%',"margin-top": 20,'margin-right':100,'position':'static'})
+                html.Img(className='two columns',src=app.get_asset_url('logo.png'),style={"height": '15%',"width":'15%',"margin-top": 20,'margin-right':20,'position':'relative'})
             ],id='header',className='row'
         ),
         html.Div(
