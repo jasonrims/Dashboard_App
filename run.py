@@ -11,13 +11,12 @@ from dash.dependencies import Output, Input
 external_css = "https://codepen.io/chriddyp/pen/bWLwgP.css"
 
 
-app = dash.Dash(__name__,csrf_protect=False)
+app = dash.Dash(__name__)
 app.css.append_css({"external_url": external_css})
-app.config.supress_callback_exceptions = True
 server = app.server
 
 colors = {"background": "#f1edf5",'plot_bg':'#f1edf5', "text": "#2a2e2b",'heading':'#d62728'}
-text_font = {"fontSize": 20}
+text_font = {"fontSize": 12}
 
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("data").resolve()
@@ -50,8 +49,9 @@ app.layout = html.Div(
     children=[
         html.Div(
             [
-                html.H1(id='heading',className="container",children="Marketing KPI Dashboard",style={"textAlign": "center","color": colors["text"],"fontSize": text_font})
-            ]
+                html.H1(className="nine columns",children="Marketing KPI Dashboard",style={"textAlign": "center","color": colors["text"],"fontSize":30}),
+                html.Img(className='two columns',src=app.get_asset_url('logo.png'),style={"height": '15%',"width":'15%',"margin-top": 20,'margin-right':100,'position':'static'})
+            ],id='header',className='row'
         ),
         html.Div(
             [
